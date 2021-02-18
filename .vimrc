@@ -6,7 +6,9 @@ set noerrorbells
 set tabstop=4 softtabstop=4
 set expandtab
 set smartindent
-set nu
+set relativenumber
+set number
+set number relativenumber
 set nowrap
 " set nobackup
 set encoding=utf-8
