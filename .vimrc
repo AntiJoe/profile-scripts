@@ -34,7 +34,7 @@ if !has('gui_running')
 endif
 
 colorscheme gruvbox
-highlight Normal guibg=none
+" highlight Normal guibg=none
 
 set background=dark
 map <C-s> :w
