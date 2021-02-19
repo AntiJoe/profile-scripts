@@ -17,13 +17,16 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-" Plug 'itchyny/lightline.vim'
+"Plug 'https://github.com/dbeniamine/cheat.sh-vim'
 Plug 'git@github.com:tpope/vim-fugitive'
 Plug 'dracula/vim', {'as':'dracula'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'junegunn/fvf', {'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 " Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'morhetz/gruvbox'
-Plug 'git@github.com:Valloric/YouCompleteMe.git'
+" Plug 'git@github.com:Valloric/YouCompleteMe.git'
 
 call plug#end()
 
