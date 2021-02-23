@@ -23,8 +23,8 @@ Plug 'dracula/vim', {'as':'dracula'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fvf', {'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-" Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
+Plug 'preservim/nerdtree'
 Plug 'morhetz/gruvbox'
 " Plug 'git@github.com:Valloric/YouCompleteMe.git'
 
@@ -43,4 +43,8 @@ set background=dark
 map <C-s> :w
 
 let mapleader = " "
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 
