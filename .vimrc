@@ -49,4 +49,13 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 nnoremap <leader>j :winc w<CR>
 inoremap jj <ESC>
+nnoremap ; :
+vnoremap ; :
+nmap ,p "0p
+nmap ,P "0P
+nmap <up> <C-w><up>
+nmap <down> <C-w><down>
+nmap <left> <C-w><left>
+nmap <right> <C-w><right>
+nnoremap <leader>^ <C-^>
 
