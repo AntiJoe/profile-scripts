@@ -48,6 +48,10 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 nnoremap <leader>j :winc w<CR>
+nnoremap tn :tabnew<Space>
+nnoremap tj :tabnext<CR>
+nnoremap tk :tabprev<CR>
+
 inoremap jj <ESC>
 nnoremap ; :
 vnoremap ; :
