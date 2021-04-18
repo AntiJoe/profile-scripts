@@ -20,7 +20,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 "Plug 'https://github.com/dbeniamine/cheat.sh-vim'
 Plug 'git@github.com:tpope/vim-fugitive'
 Plug 'dracula/vim', {'as':'dracula'}
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fvf', {'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
