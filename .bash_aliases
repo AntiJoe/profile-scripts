@@ -10,3 +10,7 @@ alias gc='git commit -m'
 alias gl='git log'
 alias glo='git log --oneline'
 alias ard='arduino-cli'
+alias fehp='feh -zsrZFD 3 /media/joe/Data/wallpaper/*'
+alias fehl='feh -zsrZF'
+
+
