@@ -62,4 +62,7 @@ nmap <down> <C-w><down>
 nmap <left> <C-w><left>
 nmap <right> <C-w><right>
 nnoremap <leader>^ <C-^>
+nnoremap <F12> *zz
 
+xnoremap K :m '<-2<CR>gv=gv
+xnoremap J :m '>+1<CR>gv=gv
