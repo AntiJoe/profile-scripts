@@ -1,11 +1,40 @@
 #!/bin/sh
 
-tmux kill-sess -t stock
+tmux kill-session -t stocks
+tmux kill-session -t php
+tmux kill-session -t pe
+
+
+SESSION="pe"
+SESSIONEXISTS=$(tmux list-sessions | grep $SESSION)
+
+cd Insync/gd/PHPaper/Projects/Trials/Screenroom  
+
+if [ "$SESSIONEXISTS" = "" ]
+then
+
+        tmux new-session -d -s $SESSION 
+        tmux new-window -t $SESSION:1 -n 'Screen'
+
+fi
+
+SESSION="php"
+SESSIONEXISTS=$(tmux list-sessions | grep $SESSION)
+
+cd ~/Projects/qwindow
+
+if [ "$SESSIONEXISTS" = "" ]
+then
+
+        tmux new-session -d -s $SESSION 
+        tmux new-window -t $SESSION:1 -n 'qwindow'
+
+fi
 
 SESSION="stocks"
 SESSIONEXISTS=$(tmux list-sessions | grep $SESSION)
 
-cd Projects/stock-review
+cd ~/Projects/stock-review
 
 if [ "$SESSIONEXISTS" = "" ]
 then
@@ -41,4 +70,8 @@ then
 
 
 fi
+
+
+
+
 
