@@ -3,18 +3,32 @@
 tmux kill-session -t stocks
 tmux kill-session -t php
 tmux kill-session -t pe
+tmux kill-session -t peye
 
 
 SESSION="pe"
 SESSIONEXISTS=$(tmux list-sessions | grep $SESSION)
 
-cd Insync/gd/PHPaper/Projects/Trials/Screenroom  
+cd ~/gd/PHPaper/Projects/Trials/Screenroom
 
 if [ "$SESSIONEXISTS" = "" ]
 then
 
         tmux new-session -d -s $SESSION 
         tmux new-window -t $SESSION:1 -n 'Screen'
+
+fi
+
+SESSION="peye"
+SESSIONEXISTS=$(tmux list-sessions | grep $SESSION)
+
+cd ~/gd/PHPaper/Projects/Trials/Screenroom  
+
+if [ "$SESSIONEXISTS" = "" ]
+then
+
+        tmux new-session -d -s $SESSION 
+        tmux new-window -t $SESSION:1 -n 'PulpEye'
 
 fi
 
@@ -42,15 +56,8 @@ then
         tmux new-session -d -s $SESSION 
 
         tmux rename -t 0 'STOCKS'
-        tmux new-window -t $SESSION:1 -n 'stocks'
-        cd rsp
-        tmux new-window -t $SESSION:2 -n 'rsp'
-        cd ../tfsa
-        tmux new-window -t $SESSION:3 -n 'tfsa'
-        cd ../margin
-        tmux new-window -t $SESSION:4 -n 'margin'
-        cd ..
-        tmux new-window -t $SESSION:5 -n 'all'
+        cd ~/Projects/stock-review
+        tmux new-window -t $SESSION:1 -n 'all'
         tmux splitw -v
         tmux splitw -h
         tmux selectp -t 0
