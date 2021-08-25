@@ -63,6 +63,11 @@ nmap <left> <C-w><left>
 nmap <right> <C-w><right>
 nnoremap <leader>^ <C-^>
 nnoremap <F12> *zz
+nnoremap <n> *zz
+nnoremap <F10> 10kzz
+nnoremap <F9> 10jzz
+nnoremap <F5> :bn<CR>
+nnoremap <F6> :bp<CR>
 
 xnoremap K :m '<-2<CR>gv=gv
 xnoremap J :m '>+1<CR>gv=gv
