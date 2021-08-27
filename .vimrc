@@ -68,6 +68,8 @@ nnoremap <F10> 10kzz
 nnoremap <F9> 10jzz
 nnoremap <F5> :bn<CR>
 nnoremap <F6> :bp<CR>
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
 
 xnoremap K :m '<-2<CR>gv=gv
 xnoremap J :m '>+1<CR>gv=gv
