@@ -9,6 +9,7 @@ set smartindent
 set relativenumber
 set number
 set number relativenumber
+set mouse=n
 set nowrap
 " set nobackup
 set encoding=utf-8
