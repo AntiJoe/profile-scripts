@@ -74,3 +74,8 @@ nnoremap <S-Tab> gT
 
 xnoremap K :m '<-2<CR>gv=gv
 xnoremap J :m '>+1<CR>gv=gv
+
+autocmd BufNewFile *.sh 0r ~/profile-scripts/templates/skeleton.sh
+autocmd BufNewFile *.html 0r ~/profile-scripts/templates/skeleton.html
+autocmd BufNewFile *.css 0r ~/profile-scripts/templates/skeleton.css
+
