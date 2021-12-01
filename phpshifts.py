@@ -1,6 +1,14 @@
 #!/usr/bin/python3  
 from collections import namedtuple, deque
 from datetime import datetime, timedelta
+import argparse
+
+parser = argparse.ArgumentParser()
+
+parser.add_argument('-d', '--days', nargs='?', default=5, const=5, type=int,
+        help='days to show')
+
+args = parser.parse_args()
 
 def shift_list(n):
     rnd = list(('d','d','n','n','o','o','o','o') * 5 + tuple(['v'] * 10))
@@ -33,19 +41,12 @@ def shift_of_date(dt):
 if __name__ == '__main__':
 
     now = datetime.now()
-    print(now.strftime('%Y-%m-%d %H:%M:%S'), shift_of_date(now))
+    print(now.strftime('%Y-%m-%d %H:%M:%S'), shift_of_date(now), "\n")
 
-    dd = datetime(2021, 9, 28, 5, 10)
-    print(dd, shift_of_date(dd))
 
-    dd = datetime(2021, 1, 15, 5, 10)
-    print(dd, shift_of_date(dd))
-
-    dd = datetime(2021, 1, 1, 5, 10)
-    print(dd, shift_of_date(dd))
-
-    for d in range(6):
+    for d in range(args.days):
         ds = now.replace(hour=7) + timedelta(days=d)
         ns = now.replace(hour=19) + timedelta(days=d)
-#        print(ds.strftime('%Y-%m-%d'), shift_of_date(ds), shift_of_date(ns))
-        print(f'{ds.strftime("%Y-%m-%d")}   {shift_of_date(ds)}   {shift_of_date(ns)}')
+        print(f'{ds.strftime("%y-%b-%d %a")}   {shift_of_date(ds)}   {shift_of_date(ns)}')
+        if ds.weekday() in [4, 6]:
+            print('-')
